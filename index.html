@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Advent of Code 2024</title>
+    <meta name="description" content="The advent of code for the year 2024, implemented in Javascript.">
+    <meta name="author" content="Finley Watson">
+
+    <meta property="og:title" content="Advent of Code 2024">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/fin-w/advent_of_code_2024">
+    <meta property="og:description" content="The advent of code for the year 2024, implemented in Javascript.>
+
+        <link rel=" icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <div class="content">
+        <h1>Advent of Code 2024</h1>
+        <p>It's December and time for this year's <a href="https://adventofcode.com/2024/about">advent of code</a>! I
+            will be attempting to complete this coding challenge using Javascript, and building a simple site to
+            showcase the results for each day.</p>
+        <p>Our challenge this year relates to the Chief Historian, who is missing. We need to look in 50 different
+            places for him, and collect 50 stars by 25th December by completing the coding challenges. He will be in one
+            of the 50 locations.</p>
+        <h2>Day 1</h2>
+        <div class="day_entry">
+            <h3 class="top">Challenge 1</h3>
+            <p>The first day begins! The Chief Historian was planning his trip before he disappeared, and has left
+                location IDs of the various significant places he may visit. We have two similar lists of the location
+                IDs, and must find the total distance between the list entries. We do this by finding the lowest entries
+                in each list, finding the distance between them, then comparing the next two entries and so on. The
+                distances between each entry are then added up to find the total distance between the two lists. I have
+                converted the input data to JSON, stored in the <code>data/</code> directory.</p>
+            <div class="code_and_button_block">
+                <pre id="day1Challenge1Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay1Challenge1()">Run the code</button>
+            </div>
+            <h3>Challenge 2</h3>
+            <p>So, it turns out some of the entries were misinterpreted handwriting... but perhaps the
+                frequently-occuring IDs are the real IDs? Now we calculate a score based on the number of times each
+                (non-unique) ID in the left list occurs in the right list. Values are multiplied together.</p>
+            <div class="code_and_button_block">
+                <pre id="day1Challenge2Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay1Challenge2()">Run the code</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Site written by <a href="https://github.com/fin-w">Finley Watson</a></p>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="data/day1data.js"></script>
+</body>
+
+</html>
