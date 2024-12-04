@@ -91,19 +91,15 @@ h3.top {
 }
 
 .day_entry button {
+    color: #cccccc;
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border: 1px solid #8bff7e;
 }
 
 .day_entry button:hover {
-    /* border-bottom: 4px solid #8bff7e; */
     border: 1px solid #c57eff;
 }
-
-/* .day_entry button:active { */
-/*     border: 1px solid #c57eff; */
-/* } */
 
 .footer p {
     color: gray;
