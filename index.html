@@ -53,12 +53,34 @@
                 <button type="button" onclick="runDay1Challenge2()">Run the code</button>
             </div>
         </div>
+        <h2>Day 2</h2>
+        <div class="day_entry">
+            <h3 class="top">Challenge 1</h3>
+            <p>Our second location... now we have to analyse some data in a nuclear power plant. The data consists of
+                sets of numbers, and safe values either increase or decrease across the whole set, while also not
+                changing by more than 3 per step, and at least 1 per step. The data has been formatted as JSON and is in
+                the <code>data/</code> directory.</p>
+            <div class="code_and_button_block">
+                <pre id="day2Challenge1Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay2Challenge1()">Run the code</button>
+            </div>
+            <h3>Challenge 2</h3>
+            <p>The results we calculated are correct, except a single bad entry can be permitted / ignored per set of
+                levels readings. Let's run through the readings again, but for any set of levels that seems wrong, run
+                through them all and drop one level at each location in the array, and see if the readings are now safe.
+            </p>
+            <div class="code_and_button_block">
+                <pre id="day2Challenge2Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay2Challenge2()">Run the code</button>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <p>Site written by <a href="https://github.com/fin-w">Finley Watson</a></p>
     </div>
     <script src="js/scripts.js"></script>
     <script src="data/day1data.js"></script>
+    <script src="data/day2data.js"></script>
 </body>
 
 </html>
