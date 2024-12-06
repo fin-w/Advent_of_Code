@@ -35,6 +35,7 @@ function runDay1Challenge2() {
 function runDay2Challenge1() {
     const data = JSON.parse(day2Data);
     let result = document.getElementById("day2Challenge1Result");
+
     const numberOfSafeResults = data.readings.filter(e => {
         if (e[0] === e[1]) {
             return false;
@@ -52,6 +53,7 @@ function runDay2Challenge1() {
         }
         return true;
     }).length;
+
     result.innerHTML = numberOfSafeResults;
 }
 
@@ -76,6 +78,7 @@ function d2C2ValidateLevels(arrayOfLevels) {
 function runDay2Challenge2() {
     const data = JSON.parse(day2Data);
     let result = document.getElementById("day2Challenge2Result");
+
     const numberOfSafeResults = data.readings.filter(e => {
         if (d2C2ValidateLevels(e)) {
             return true;
@@ -89,5 +92,41 @@ function runDay2Challenge2() {
         }
         return false;
     }).length;
+
     result.innerHTML = numberOfSafeResults;
+}
+
+function runDay3Challenge1() {
+    const data = document.getElementById("day3Data");
+    const validDataRegex = /mul\(([0-9]+),([0-9]+)\)/g;
+    let result = document.getElementById("day3Challenge1Result");
+    let total = 0;
+
+    while ((numbers = validDataRegex.exec(data.textContent)) !== null) {
+        assert(numbers.length === 3);
+        total += numbers[1] * numbers[2];
+    }
+
+    result.innerHTML = total;
+}
+
+function runDay3Challenge2() {
+    const data = document.getElementById("day3Data");
+    const validDataRegex = /(mul\(([0-9]+),([0-9]+)\)|do\(\)|don't\(\))/g;
+    let result = document.getElementById("day3Challenge2Result");
+    let isAllowedToMultiply = true;
+    let total = 0;
+
+    while ((command = validDataRegex.exec(data.textContent)) !== null) {
+        if (command[0] === "do()") {
+            isAllowedToMultiply = true;
+        } else if (command[0] === "don't()") {
+            isAllowedToMultiply = false;
+        } else if (isAllowedToMultiply) {
+            assert(command[0].startsWith("mul("));
+            total += command[2] * command[3];
+        }
+    }
+
+    result.innerHTML = total;
 }
