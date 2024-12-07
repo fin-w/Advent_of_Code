@@ -92,10 +92,8 @@ h3.top {
     margin: 20px 0 0 0;
 }
 
-.code_pre code {
-    overflow: auto;
+.hljs {
     background-color: #07080b;
-    padding: 2px;
 }
 
 .day_entry .results_block {
