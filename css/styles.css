@@ -92,10 +92,10 @@ h3.top {
     margin: 20px 0 0 0;
 }
 
-.hljs {
-    color: #afafaf;
-    background-color: #07080b;
-}
+/* .hljs { */
+/*     color: #afafaf; */
+/*     background-color: #07080b; */
+/* } */
 
 .day_entry .results_block {
     margin: 20px 0 0 auto;
