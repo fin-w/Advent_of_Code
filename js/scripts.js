@@ -11,6 +11,7 @@ function toggleCode(buttonId) {
     if (button.innerHTML.startsWith("Show")) {
         button.innerHTML = 'Hide code<img class="icon" aria-hidden="true" src="images/arrow_up.svg">';
         code.style["position"] = "static";
+        code.style["background-color"] = "#07080b";
     } else {
         button.innerHTML = 'Show code<img class="icon" aria-hidden="true" src="images/arrow_down.svg">';
         code.style["position"] = "absolute";
