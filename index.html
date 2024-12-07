@@ -36,7 +36,7 @@
                 IDs, and must find the total distance between the list entries. We do this by finding the lowest entries
                 in each list, finding the distance between them, then comparing the next two entries and so on. The
                 distances between each entry are then added up to find the total distance between the two lists. I have
-                converted the input data to JSON, stored in the <code>data/</code> directory.</p>
+                converted the input data to JSON, stored in the <code>data/day1data.js</code> file.</p>
             <div class="code_and_button_block">
                 <pre id="day1Challenge1Result" class="code_answer_block"></pre>
                 <button type="button" onclick="runDay1Challenge1()">Run the code</button>
@@ -56,7 +56,7 @@
             <p>Our second location... now we have to analyse some data in a nuclear power plant. The data consists of
                 sets of numbers, and safe values either increase or decrease across the whole set, while also not
                 changing by more than 3 per step, and at least 1 per step. The data has been formatted as JSON and is in
-                the <code>data/</code> directory.</p>
+                the <code>data/day2data.js</code> file.</p>
             <div class="code_and_button_block">
                 <pre id="day2Challenge1Result" class="code_answer_block"></pre>
                 <button type="button" onclick="runDay2Challenge1()">Run the code</button>
@@ -264,6 +264,31 @@ MMMMMMMSMMXAAXXMMXAXMAXASMSAMMAAXMXMXMMMSMXMAMSXSMXAXSXSAMXXAMMMSMMMMSSSMMSSSXSS
                 <button type="button" onclick="runDay4Challenge2()">Run the code</button>
             </div>
         </div>
+        <h2>Day 5</h2>
+        <div class="day_entry">
+            <h3 class="top">Challenge 1</h3>
+            <p>Let's figure out a printer queue problem relating to manual updates. We need to check lists of page
+                numbers according to ordering rules provided. Lists in order are those that follow all rules relating to
+                the numbers they contain. For example, a rule of <code>11|32</code> means a list containing both numbers
+                must include the first number somewhere in the list before the second number. This is actually quite a
+                pleasant application of filtering and manipulating iterators, and can be completed in a few lines of
+                code. The data is stored as Javascript arrays in <code>data/day5data.js</code>.</p>
+            <div class="code_and_button_block">
+                <pre id="day5Challenge1Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay5Challenge1()">Run the code</button>
+            </div>
+            <h3>Challenge 2</h3>
+            <p>Now let's process the badly ordered remainder of lists of numbers, by applying the rules to them. At
+                first I looked into wave function collapse, but the answer is actually simpler: there must be an initial
+                number with none that come before it. And the following rules dictate only one number that can come
+                next, so we can find it and add it and slowly walk along the entire list this way, ordering everything.
+                I'm asserting where I can, to ensure we come to the right answer.</p>
+            <div class="code_and_button_block">
+                <pre id="day5Challenge2Result" class="code_answer_block"></pre>
+                <button type="button" onclick="runDay5Challenge2()">Run the code</button>
+            </div>
+
+        </div>
 
     </div>
     <div class="footer">
@@ -272,6 +297,7 @@ MMMMMMMSMMXAAXXMMXAXMAXASMSAMMAAXMXMXMMMSMXMAMSXSMXAXSXSAMXXAMMMSMMMMSSSMMSSSXSS
     <script src="js/scripts.js"></script>
     <script src="data/day1data.js"></script>
     <script src="data/day2data.js"></script>
+    <script src="data/day5data.js"></script>
 </body>
 
 </html>

@@ -302,3 +302,84 @@ function runDay4Challenge2() {
     result.innerHTML = totalMatches;
 }
 
+function day5IsValidOrder(arrayEntry) {
+    for (let i = 0; i < day5Rules.length; i++) {
+        // if the current rule applies but the order is wrong
+        if (arrayEntry.includes(day5Rules[i][0])
+            && arrayEntry.includes(day5Rules[i][1])
+            && arrayEntry.indexOf(day5Rules[i][0]) > arrayEntry.indexOf(day5Rules[i][1])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function runDay5Challenge1() {
+    let result = document.getElementById("day5Challenge1Result");
+
+    let total = day5Data.filter(e => {
+        return day5IsValidOrder(e);
+    }).map(e => {
+        assert(e.length % 2 === 1);
+        return e[(e.length - 1) / 2];
+    }).reduce((partialSum, v) => partialSum + v, 0);
+
+    result.innerHTML = total;
+}
+
+function day5FindAcceptableNumbersPriorTo(number, relevantRules) {
+    return relevantRules.filter(r => (r[1] === number))
+        .map(r => r[0]).flat();
+}
+
+function day5NumberCanBeNext(acceptableNumbersPrior, partialFinalOrdering) {
+    for (n of partialFinalOrdering) {
+        if (!acceptableNumbersPrior.includes(n)) {
+            return false;
+        }
+    }
+    for (n of acceptableNumbersPrior) {
+        if (!partialFinalOrdering.includes(n)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function runDay5Challenge2() {
+    let result = document.getElementById("day5Challenge2Result");
+
+    let total = day5Data.filter(e => {
+        return !day5IsValidOrder(e);
+    }).map(e => {
+        const relevantRules = day5Rules.filter(r => {
+            if (e.includes(r[0]) && e.includes(r[1])) {
+                return true;
+            }
+            return false;
+        });
+
+        var finalOrdering = [];
+        // at absolute most this should need e.length
+        // runs through the list to correctly order everything
+        for (var i = 0; i < e.length; i++) {
+            for (number of e) {
+                if (finalOrdering.includes(number)) {
+                    continue;
+                }
+                const acceptableNumbersPrior = day5FindAcceptableNumbersPriorTo(number, relevantRules);
+                if (day5NumberCanBeNext(acceptableNumbersPrior, finalOrdering)) {
+                    finalOrdering.push(number);
+                }
+            }
+        }
+
+        assert(day5IsValidOrder(finalOrdering) && finalOrdering.length === e.length);
+        return finalOrdering;
+    }).map(e => {
+        assert(e.length % 2 === 1);
+        return e[(e.length - 1) / 2];
+    }).reduce((partialSum, v) => partialSum + v, 0);
+
+    result.innerHTML = total;
+}
