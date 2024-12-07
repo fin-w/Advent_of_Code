@@ -75,30 +75,54 @@ h3.top {
     border-radius: 6px;
 }
 
-.day_entry .code_and_button_block {
+.icon {
+    padding-left: 10px;
+    height: 0.8em;
+}
+
+.day_entry .code_block {
+    margin: 20px 0 0 auto;
+}
+
+.day_entry .code_pre {
+    position: absolute;
+    left: -999px;
+    overflow: auto;
+    background-color: #07080b;
+    color: #8bff7e;
+    margin: 20px 0 0 0;
+    padding: 2px;
+
+}
+
+.day_entry .results_block {
     margin: 20px 0 0 auto;
     display: flex;
 }
 
-.day_entry .code_answer_block {
+.day_entry .answer_pre {
     background-color: #07080b;
     color: #8bff7e;
     margin: 0;
+    padding: 0;
+    line-height: calc(20px + 0.8em);
     display: inline-flex;
     flex-grow: 100;
     justify-content: center;
-    font-size: 2em;
+    font-size: 1.8em;
+    overflow-x: auto;
 }
 
 .day_entry button {
+    font-size: 1em;
     color: #cccccc;
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    border: 1px solid #8bff7e;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .day_entry button:hover {
-    border: 1px solid #c57eff;
+    border: 1px solid #8bff7e;
 }
 
 .footer p {
