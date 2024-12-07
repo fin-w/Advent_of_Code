@@ -84,15 +84,18 @@ h3.top {
     margin: 20px 0 0 auto;
 }
 
-.day_entry .code_pre {
+.code_pre {
     position: absolute;
     left: -999px;
+    top: -999px;
+    padding: 0px;
+    margin: 20px 0 0 0;
+}
+
+.code_pre code {
     overflow: auto;
     background-color: #07080b;
-    color: #8bff7e;
-    margin: 20px 0 0 0;
     padding: 2px;
-
 }
 
 .day_entry .results_block {
