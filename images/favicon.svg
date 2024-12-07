@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Unofficial_JavaScript_logo_2.svg"
+   inkscape:export-filename="../JS/JS/JS/JS/JS/JS/JS/code_advent_2024/favicon.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   width="32"
+   height="32"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="32"
+       height="32"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <rect
+     width="32"
+     height="32"
+     fill="#f7df1e"
+     id="rect1"
+     x="0"
+     y="0"
+     style="stroke-width:0.0507937" />
+  <path
+     d="m 21.495873,25.000127 c -0.152633,1.225359 1.340265,1.989865 2.383972,1.606073 1.20267,-0.113321 2.058604,-1.86641 0.887272,-2.623377 -1.339419,-1.166173 -3.458448,-1.388474 -4.307763,-3.103048 -1.176828,-2.2319 -0.488985,-5.415479 1.812956,-6.639879 1.225406,-0.678711 3.144386,-0.49067 3.752436,0.925702 0.45549,0.988415 -0.163668,1.996922 -0.868388,2.671318 -0.774283,0.633689 -0.760251,1.803353 -0.01228,2.446296 1.179878,1.148137 3.085897,1.422414 3.922757,2.949272 1.396499,2.433691 -0.322492,5.882982 -3.046857,6.382782 -2.147894,0.487383 -4.732128,-0.236518 -5.846506,-2.253982 -0.671415,-0.942501 0.05596,-2.628668 1.322405,-2.361157 z m -10.622476,0.260571 c 0.953104,1.203932 2.929838,0.83641 3.767555,-0.317836 0.817915,-0.934122 0.918192,-2.424388 0.136281,-3.409482 -0.658133,-1.42635 -1.202681,-3.18715 -0.409158,-4.66976 0.672249,-0.992044 2.426031,-0.879804 2.885437,0.261446 0.736696,1.449044 0.225381,3.099849 0.222556,4.638769 -0.141802,1.954766 -0.196666,3.967844 -0.847292,5.83103 -1.319836,2.208683 -4.819993,2.847858 -6.6646858,0.943827 -0.974096,-0.970144 -0.7133907,-3.226334 0.9093068,-3.277994 z"
+     id="path1"
+     style="stroke-width:0.0507937" />
+</svg>
